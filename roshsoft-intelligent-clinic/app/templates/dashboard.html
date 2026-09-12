@@ -1,0 +1,7 @@
+{% extends "base.html" %}{% block content %}
+<div class="page-head"><div><p class="eyebrow">TODAY'S CLINIC</p><h1>Good day, {{ user.full_name.split(' ')[0] }}</h1><p class="muted">{{ stats.today }} scheduled visits</p></div><a class="button" href="/appointments/new">＋ New appointment</a></div>
+<section class="stats"><article><span>Total patients</span><strong>{{ stats.patients }}</strong></article><article><span>Today's visits</span><strong>{{ stats.today }}</strong></article><article><span>Waiting</span><strong>{{ stats.waiting }}</strong></article><article><span>Completed</span><strong>{{ stats.completed }}</strong></article></section>
+<section class="panel"><div class="panel-head"><h2>Today's queue</h2><a href="/patients/new">Register patient</a></div>
+{% if appointments %}<div class="table-wrap"><table><thead><tr><th>Time</th><th>Patient</th><th>Doctor</th><th>Reason</th><th>Status</th><th></th></tr></thead><tbody>{% for a in appointments %}<tr><td>{{ a.scheduled_at.strftime('%H:%M') }}</td><td><strong>{{ a.patient.full_name }}</strong><small>{{ a.patient.patient_number }}</small></td><td>{{ a.doctor.full_name }}</td><td>{{ a.reason }}</td><td><span class="badge {{ a.status.value }}">{{ a.status.value.replace('_',' ') }}</span></td><td><a href="/appointments/{{ a.id }}">Open →</a></td></tr>{% endfor %}</tbody></table></div>{% else %}<div class="empty">No appointments today.</div>{% endif %}</section>
+{% endblock %}
+

@@ -1,0 +1,5 @@
+{% extends "base.html" %}{% block content %}
+<div class="page-head"><div><p class="eyebrow">SCHEDULING</p><h1>New appointment</h1></div></div>
+<form method="post" class="panel form-grid"><label>Patient *<select name="patient_id" required>{% for p in patients %}<option value="{{ p.id }}" {% if p.id == patient_id %}selected{% endif %}>{{ p.full_name }} · {{ p.patient_number }}</option>{% endfor %}</select></label><label>Doctor *<select name="doctor_id" required>{% for d in doctors %}<option value="{{ d.id }}">{{ d.full_name }}</option>{% endfor %}</select></label><label>Date and time *<input type="datetime-local" name="scheduled_at" required></label><label>Reason for visit *<input name="reason" required></label><div class="actions wide"><a class="button secondary" href="/">Cancel</a><button>Confirm appointment</button></div></form>
+{% endblock %}
+

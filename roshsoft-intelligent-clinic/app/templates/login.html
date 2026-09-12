@@ -1,0 +1,7 @@
+{% extends "base.html" %}{% block title %}Sign in · Roshsoft Clinic{% endblock %}{% block content %}
+<div class="login-shell"><section class="login-card"><div class="logo">✚</div><h1>Intelligent Clinic</h1><p class="muted">Secure workspace for your care team</p>
+{% if error %}<div class="alert">{{ error }}</div>{% endif %}
+<form method="post" action="/login" class="stack"><label>Email<input type="email" name="email" required autofocus></label><label>Password<input type="password" name="password" required></label><button>Sign in securely</button></form>
+<p class="hint">First run: admin@roshsoft.local / ChangeMe123!<br>Change this account immediately.</p></section></div>
+{% endblock %}
+

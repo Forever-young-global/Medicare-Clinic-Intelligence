@@ -1,0 +1,6 @@
+{% extends "base.html" %}{% block content %}
+<div class="page-head"><div><p class="eyebrow">PATIENT RECORDS</p><h1>Patients</h1></div><a class="button" href="/patients/new">＋ Register patient</a></div>
+<form class="search"><input name="q" value="{{ q }}" placeholder="Search by name, mobile or patient number"><button>Search</button></form>
+<section class="panel"><div class="table-wrap"><table><thead><tr><th>Patient number</th><th>Name</th><th>Mobile</th><th>Blood group</th><th>Consent</th><th></th></tr></thead><tbody>{% for p in patients %}<tr><td>{{ p.patient_number }}</td><td><strong>{{ p.full_name }}</strong></td><td>{{ p.phone }}</td><td>{{ p.blood_group or '—' }}</td><td>{{ 'Yes' if p.consent_given else 'No' }}</td><td><a href="/patients/{{ p.id }}">View →</a></td></tr>{% else %}<tr><td colspan="6" class="empty">No matching patients.</td></tr>{% endfor %}</tbody></table></div></section>
+{% endblock %}
+

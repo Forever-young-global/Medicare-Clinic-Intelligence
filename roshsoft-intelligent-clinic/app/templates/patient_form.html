@@ -1,0 +1,13 @@
+{% extends "base.html" %}{% block content %}
+<div class="page-head"><div><p class="eyebrow">NEW RECORD</p><h1>Register patient</h1></div></div>
+<form method="post" class="panel form-grid">
+<label>Full name *<input name="full_name" required></label><label>Mobile number *<input name="phone" required></label>
+<label>Date of birth<input type="date" name="date_of_birth"></label><label>Sex<select name="sex"><option value="">Select</option><option>Female</option><option>Male</option><option>Other</option><option>Prefer not to say</option></select></label>
+<label>Email<input type="email" name="email"></label><label>Blood group<input name="blood_group" placeholder="Example: O+"></label>
+<label class="wide">Address<textarea name="address"></textarea></label><label>Emergency contact<input name="emergency_contact"></label>
+<label>Known allergies<textarea name="allergies"></textarea></label><label>Chronic conditions<textarea name="chronic_conditions"></textarea></label>
+<label class="wide">Current medicines<textarea name="current_medications"></textarea></label>
+<label class="check wide"><input type="checkbox" name="consent_given" required> Patient consent for storing and using health information has been recorded.</label>
+<div class="actions wide"><a class="button secondary" href="/patients">Cancel</a><button>Save patient securely</button></div></form>
+{% endblock %}
+

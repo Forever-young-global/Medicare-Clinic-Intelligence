@@ -1,0 +1,4 @@
+{% extends "base.html" %}{% block content %}
+<div class="page-head"><div><p class="eyebrow">CLINIC INTELLIGENCE</p><h1>Reports</h1></div></div><section class="stats"><article><span>Collected revenue</span><strong>₹{{ '%.2f'|format(revenue|float) }}</strong></article>{% for status,count in status_rows %}<article><span>{{ status.value.replace('_',' ') }}</span><strong>{{ count }}</strong></article>{% endfor %}</section><section class="panel"><h2>Privacy note</h2><p>Operational reports show aggregate figures. Extend this module with minimum-necessary access, de-identification, and approved exports before production analytics.</p></section>
+{% endblock %}
+
