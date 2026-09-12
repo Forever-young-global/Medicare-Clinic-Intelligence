@@ -4,6 +4,20 @@ A GitHub-ready clinic analytics dashboard for managing patients, appointments, d
 
 > **Important:** This project uses demo/fake data. It is not a medical device and must not be used with real patient data without a proper security, privacy, compliance, and clinical review.
 
+## Project Preview
+
+### MediCare Clinic Intelligence
+
+![MediCare Clinic Intelligence Overview](./medicare-overview.jpeg)
+
+### Clinic Dashboard
+
+![MediCare Clinic Intelligence Dashboard](./medicare-dashboard.jpeg)
+
+### Application Features
+
+![MediCare Clinic Intelligence Features](./medicare-features.jpeg)
+
 ## Stack
 
 - Frontend: React + Vite
