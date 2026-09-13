@@ -2,11 +2,11 @@
 
 A clean full-stack starter running on [vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and Drizzle support.
 
-![MediCare Clinic Intelligence Overview](./screenshots/medicare-overview.jpeg)
+![MediCare Clinic Intelligence Overview](./medicare-overview.jpeg)
 
-![MediCare Clinic Intelligence Dashboard](./screenshots/medicare-dashboard.jpeg)
+![MediCare Clinic Intelligence Dashboard](./medicare-dashboard.jpeg)
 
-![MediCare Clinic Intelligence Features](./screenshots/medicare-features.jpeg)
+![MediCare Clinic Intelligence Features](./medicare-features.jpeg)
 
 ## Prerequisites
 
